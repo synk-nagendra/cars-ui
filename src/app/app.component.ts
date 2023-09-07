@@ -53,26 +53,15 @@ export class AppComponent implements OnInit {
   }
 
   search() {
-    console.log(this.filters);
     this._vehicalsService.getVehicals(this.filters).subscribe((data) => {
       this.cars$ = data[0];
       this.length = data[1];
-      console.log(data[0]);
     });
   }
 
-  onSelectMake(make: string, $event: any) {
-    console.log(make, $event);
-    console.log(this.selectedMakes);
-    this.filters.make = make;
-  }
-
   onPaginateChange(event: PageEvent) {
-    //if (this.pageIndex !== event.pageIndex) {
-    console.log(event.pageIndex);
     this.pageIndex = event.pageIndex;
     this.filters.page = event.pageIndex + 1;
     this.search();
-    //}
   }
 }
