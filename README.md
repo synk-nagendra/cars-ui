@@ -2,9 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
+#Setup on local
+Pelase clone this repo on your local machine, run below commands to install project dependencies
+-cd cars-ui
+-npm install
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+To run on local server, it's using nestjs APIs running at http://localhost:3000/api
+Please update the API path in environments/environment.ts file if you need to change the api URI
 
 ## Code scaffolding
 
